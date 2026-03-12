@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LUMÉ Demo Store</title>
+
+  <!-- Google Tag Manager -->
+  <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+  j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id=GTM-K3B25SHW'+dl;
+  f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K3B25SHW');
+  </script>
+
+</head>
+<body>
+
+<h1>LUMÉ Demo Store — Built for GA4 / GTM Testing</h1>
+
+<p>🟢 GTM + GA4 Demo Active — All dataLayer events are firing below</p>
+
+<!-- Product buttons -->
+<button onclick="viewProduct()">View Product</button>
+<button onclick="addToCart()">Add To Cart</button>
+<button onclick="checkout()">Checkout</button>
+
+<!-- Event log -->
+<div id="event-log">📊 DataLayer / GA4 Event Log 0 events</div>
+
+<script>
+function viewProduct(){
+  dataLayer.push({ event: "view_item", item_name: "Test Product" });
+  alert("Product Viewed");
+}
+function addToCart(){
+  dataLayer.push({ event: "add_to_cart", item_name: "Test Product" });
+  alert("Added to Cart");
+}
+function checkout(){
+  dataLayer.push({ event: "begin_checkout" });
+  alert("Checkout Started");
+}
+</script>
+
+</body>
+</html>
